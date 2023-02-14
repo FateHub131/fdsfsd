@@ -1,0 +1,244 @@
+local Library = {}
+
+function Library:CreateMain()
+	local PLGui = Instance.new("ScreenGui")
+	local MainFrame = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local Title = Instance.new("TextLabel")
+	local TabFrame = Instance.new("Frame")
+	local CharacterTab = Instance.new("TextButton")
+	local UIListLayout = Instance.new("UIListLayout")
+	local WeaponTab = Instance.new("TextButton")
+	local TeleportsTab = Instance.new("TextButton")
+	local ServerTab = Instance.new("TextButton")
+	local FETab = Instance.new("TextButton")
+	local OptionsTab = Instance.new("TextButton")
+	local HolderFrame = Instance.new("Frame")
+	local UICorner_2 = Instance.new("UICorner")
+	local BorderTabs = Instance.new("Folder")
+	local BorderFrame1 = Instance.new("Frame")
+	local BorderFrame2 = Instance.new("Frame")
+	local BorderFrame3 = Instance.new("Frame")
+	local BorderFrame4 = Instance.new("Frame")
+	local BorderFrame5 = Instance.new("Frame")
+	local BorderFrame6 = Instance.new("Frame")
+	local ContainerFrames = Instance.new("Folder")
+	local Frame = Instance.new("Frame")
+	local UIGridLayout = Instance.new("UIGridLayout")
+	local TextButton = Instance.new("TextButton")
+	local UICorner_3 = Instance.new("UICorner")
+	local FPSCounter = Instance.new("TextLabel")
+
+	PLGui.Name = "PLGui"
+	PLGui.Parent = game.CoreGui
+	PLGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	MainFrame.Name = "MainFrame"
+	MainFrame.Parent = PLGui
+	MainFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	MainFrame.BackgroundTransparency = 0.300
+	MainFrame.BorderSizePixel = 0
+	MainFrame.Position = UDim2.new(0.46587351, 0, 0.478021979, 0)
+	MainFrame.Size = UDim2.new(0, 496, 0, 300)
+	MainFrame.Active = true
+	MainFrame.Draggable = true
+
+	UICorner.CornerRadius = UDim.new(0, 12)
+	UICorner.Parent = MainFrame
+
+	Title.Name = "Title"
+	Title.Parent = MainFrame
+	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Title.BackgroundTransparency = 1.000
+	Title.Size = UDim2.new(0, 496, 0, 38)
+	Title.Font = Enum.Font.SourceSans
+	Title.Text = "Testing UI"
+	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Title.TextSize = 22.000
+	Title.TextWrapped = true
+
+	TabFrame.Name = "TabFrame"
+	TabFrame.Parent = MainFrame
+	TabFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TabFrame.BackgroundTransparency = 1.000
+	TabFrame.Position = UDim2.new(0.0131737497, 0, 0.127118632, 0)
+	TabFrame.Size = UDim2.new(0, 482, 0, 20)
+
+	CharacterTab.Name = "CharacterTab"
+	CharacterTab.Parent = TabFrame
+	CharacterTab.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+	CharacterTab.BackgroundTransparency = 0.300
+	CharacterTab.BorderSizePixel = 0
+	CharacterTab.Size = UDim2.new(0, 80, 0, 20)
+	CharacterTab.Font = Enum.Font.SourceSans
+	CharacterTab.Text = "Character"
+	CharacterTab.TextColor3 = Color3.fromRGB(255, 255, 255)
+	CharacterTab.TextSize = 16.000
+
+	UIListLayout.Parent = TabFrame
+	UIListLayout.FillDirection = Enum.FillDirection.Horizontal
+	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+	WeaponTab.Name = "WeaponTab"
+	WeaponTab.Parent = TabFrame
+	WeaponTab.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+	WeaponTab.BackgroundTransparency = 0.300
+	WeaponTab.BorderSizePixel = 0
+	WeaponTab.Size = UDim2.new(0, 80, 0, 20)
+	WeaponTab.Font = Enum.Font.SourceSans
+	WeaponTab.Text = "Weapon"
+	WeaponTab.TextColor3 = Color3.fromRGB(255, 255, 255)
+	WeaponTab.TextSize = 16.000
+
+	TeleportsTab.Name = "TeleportsTab"
+	TeleportsTab.Parent = TabFrame
+	TeleportsTab.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+	TeleportsTab.BackgroundTransparency = 0.300
+	TeleportsTab.BorderSizePixel = 0
+	TeleportsTab.Size = UDim2.new(0, 80, 0, 20)
+	TeleportsTab.Font = Enum.Font.SourceSans
+	TeleportsTab.Text = "Teleports"
+	TeleportsTab.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TeleportsTab.TextSize = 16.000
+
+	ServerTab.Name = "ServerTab"
+	ServerTab.Parent = TabFrame
+	ServerTab.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+	ServerTab.BackgroundTransparency = 0.300
+	ServerTab.BorderSizePixel = 0
+	ServerTab.Size = UDim2.new(0, 80, 0, 20)
+	ServerTab.Font = Enum.Font.SourceSans
+	ServerTab.Text = "Server"
+	ServerTab.TextColor3 = Color3.fromRGB(255, 255, 255)
+	ServerTab.TextSize = 16.000
+
+	FETab.Name = "FETab"
+	FETab.Parent = TabFrame
+	FETab.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+	FETab.BackgroundTransparency = 0.300
+	FETab.BorderSizePixel = 0
+	FETab.Size = UDim2.new(0, 80, 0, 20)
+	FETab.Font = Enum.Font.SourceSans
+	FETab.Text = "FE Bypass"
+	FETab.TextColor3 = Color3.fromRGB(255, 255, 255)
+	FETab.TextSize = 16.000
+
+	OptionsTab.Name = "OptionsTab"
+	OptionsTab.Parent = TabFrame
+	OptionsTab.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+	OptionsTab.BackgroundTransparency = 0.300
+	OptionsTab.BorderSizePixel = 0
+	OptionsTab.Size = UDim2.new(0, 80, 0, 20)
+	OptionsTab.Font = Enum.Font.SourceSans
+	OptionsTab.Text = "Options"
+	OptionsTab.TextColor3 = Color3.fromRGB(255, 255, 255)
+	OptionsTab.TextSize = 16.000
+
+	HolderFrame.Name = "HolderFrame"
+	HolderFrame.Parent = MainFrame
+	HolderFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+	HolderFrame.BackgroundTransparency = 0.300
+	HolderFrame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+	HolderFrame.Position = UDim2.new(0.0131737497, 0, 0.220282599, 0)
+	HolderFrame.Size = UDim2.new(0, 482, 0, 227)
+
+	UICorner_2.CornerRadius = UDim.new(0, 12)
+	UICorner_2.Parent = HolderFrame
+
+	BorderTabs.Name = "BorderTabs"
+	BorderTabs.Parent = MainFrame
+
+	BorderFrame1.Name = "BorderFrame1"
+	BorderFrame1.Parent = BorderTabs
+	BorderFrame1.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+	BorderFrame1.BorderSizePixel = 0
+	BorderFrame1.Position = UDim2.new(0.0120967738, 0, 0.193333328, 0)
+	BorderFrame1.Size = UDim2.new(0, 80, 0, 2)
+
+	BorderFrame2.Name = "BorderFrame2"
+	BorderFrame2.Parent = BorderTabs
+	BorderFrame2.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+	BorderFrame2.BorderSizePixel = 0
+	BorderFrame2.Position = UDim2.new(0.173387095, 0, 0.193333328, 0)
+	BorderFrame2.Size = UDim2.new(0, 80, 0, 2)
+	BorderFrame2.Visible = false
+
+	BorderFrame3.Name = "BorderFrame3"
+	BorderFrame3.Parent = BorderTabs
+	BorderFrame3.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+	BorderFrame3.BorderSizePixel = 0
+	BorderFrame3.Position = UDim2.new(0.334677398, 0, 0.193333328, 0)
+	BorderFrame3.Size = UDim2.new(0, 80, 0, 2)
+	BorderFrame3.Visible = false
+
+	BorderFrame4.Name = "BorderFrame4"
+	BorderFrame4.Parent = BorderTabs
+	BorderFrame4.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+	BorderFrame4.BorderSizePixel = 0
+	BorderFrame4.Position = UDim2.new(0.495967716, 0, 0.193333328, 0)
+	BorderFrame4.Size = UDim2.new(0, 80, 0, 2)
+	BorderFrame4.Visible = false
+
+	BorderFrame5.Name = "BorderFrame5"
+	BorderFrame5.Parent = BorderTabs
+	BorderFrame5.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+	BorderFrame5.BorderSizePixel = 0
+	BorderFrame5.Position = UDim2.new(0.657258034, 0, 0.193333328, 0)
+	BorderFrame5.Size = UDim2.new(0, 80, 0, 2)
+	BorderFrame5.Visible = false
+
+	BorderFrame6.Name = "BorderFrame6"
+	BorderFrame6.Parent = BorderTabs
+	BorderFrame6.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+	BorderFrame6.BorderSizePixel = 0
+	BorderFrame6.Position = UDim2.new(0.818548322, 0, 0.193333328, 0)
+	BorderFrame6.Size = UDim2.new(0, 80, 0, 2)
+	BorderFrame6.Visible = false
+
+	ContainerFrames.Name = "ContainerFrames"
+	ContainerFrames.Parent = MainFrame
+
+	Frame.Parent = ContainerFrames
+	Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Frame.BackgroundTransparency = 1.000
+	Frame.Position = UDim2.new(0.0262096766, 0, 0.24333334, 0)
+	Frame.Size = UDim2.new(0, 473, 0, 214)
+
+	UIGridLayout.Parent = Frame
+	UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	UIGridLayout.CellPadding = UDim2.new(0, 4, 0, 11)
+	UIGridLayout.CellSize = UDim2.new(0, 75, 0, 26)
+
+	UICorner_3.CornerRadius = UDim.new(0, 10)
+	UICorner_3.Parent = TextButton
+
+	FPSCounter.Name = "FPSCounter"
+	FPSCounter.Parent = MainFrame
+	FPSCounter.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	FPSCounter.BackgroundTransparency = 1.000
+	FPSCounter.Position = UDim2.new(0.0262096766, 0, 0.0266666673, 0)
+	FPSCounter.Size = UDim2.new(0, 47, 0, 24)
+	FPSCounter.Font = Enum.Font.SourceSans
+	FPSCounter.Text = ""
+	FPSCounter.TextColor3 = Color3.fromRGB(0, 255, 0)
+	FPSCounter.TextSize = 20.000
+	FPSCounter.TextXAlignment = Enum.TextXAlignment.Left
+
+	local GamerLibrary = {}
+
+	function GamerLibrary:NewButton(name)
+		local TextButton = Instance.new("TextButton")
+
+		TextButton.Parent = Frame
+		TextButton.BackgroundColor3 = Color3.fromRGB(120, 120, 120)
+		TextButton.BackgroundTransparency = 0.400
+		TextButton.Size = UDim2.new(0, 200, 0, 50)
+		TextButton.Font = Enum.Font.SourceSans
+		TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextButton.TextSize = 14.000
+	end
+
+	return GamerLibrary;
+end
+
+return Library;
